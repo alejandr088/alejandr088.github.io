@@ -1,534 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Alejandro Rivello</title>
-        <link rel="icon" href="assets/image/favicon.ico" />
-        <link rel="stylesheet" href="assets/css/tailwind.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-            rel="stylesheet"
-        />
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
-            integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        ></script>
-        <script
-            defer
-            src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
-        ></script>
-    </head>
 
-    <body>
-        <section class="py-16">
-            <div class="container max-w-screen-xl mx-auto px-4">
-                <nav
-                    class="flex-wrap lg:flex items-center justify-between mb-24 xl:mb-48"
-                    x-data="{navbarOpen:false}"
-                >
-                    <div class="flex items-center mb-10 lg:mb-0">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alejandro JR Develop</title>
+    <link rel="icon" href="assets/image/favicon.ico" />
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
+        integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
 
-                        <button
-                            class="w-10 h-10 lg:hidden ml-auto flex items-center justify-center text-indigo-800 border border-indigo-800 rounded-md"
-                            @click="navbarOpen = !navbarOpen"
-                        >
-                            <i data-feather="menu"></i>
-                        </button>
-                    </div>
+<body>
+    <section class="py-16">
+        <div class="container max-w-screen-xl mx-auto px-4">
+            <nav class="flex-wrap lg:flex items-center justify-between mb-24 xl:mb-48" x-data="{navbarOpen:false}">
+                <div class="flex items-center mb-10 lg:mb-0">
 
-                    <ul
-                        class="lg:flex flex-col lg:flex-row lg:items-center lg:space-x-20 mb-10 xl:mb-0"
-                        :class="{'hidden':!navbarOpen,'flex':navbarOpen}"
-                    >
-                        <li
-                            class="font-medium text-gray-500 text-lg hover:text-gray-400 transiton ease-in-out duration-300 mb-5 lg:mb-0"
-                        >
-                            <a href="#education">Education</a>
-                        </li>
-                        <li
-                            class="font-medium text-gray-500 text-lg hover:text-gray-400 transiton ease-in-out duration-300 mb-5 lg:mb-0"
-                        >
-                            <a href="#works">Works</a>
-                        </li>
-                       
-                        <li
-                            class="px-8 py-3 font-medium text-indigo-800 text-lg text-center border-2 border-indigo-800 rounded-md hover:bg-indigo-800 hover:text-white transiton ease-linear duration-300"
-                        >
-                            <a href="mailto:rivello088@gmail.com">Hire me</a>
-                        </li>
-                        <li
-                            class="font-medium text-gray-500 text-lg hover:text-gray-400 transiton ease-in-out duration-300 mb-5 lg:mb-0"
-                            >
-                            <a href="index_es.html" class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300">
-                                <span class="text-gray-500 hover:text-white transition ease-in-out duration-500">EN</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <header
-                    class="flex flex-col lg:flex-row justify-between lg:mb-20"
-                >
-                    <div class="text-center lg:text-left mb-20 lg:mb-0">
-                        <div
-                            class="flex items-center justify-center lg:justify-start gap-2 mb-10"
-                        >
-                            <span class="w-20 h-0.5 bg-indigo-700"></span>
-
-                            <p class="font-medium text-indigo-700 text-xl">
-                                Alejandro Rivello
-                            </p>
-                        </div>
-
-                        <h1
-                            class="font-bold text-gray-800 text-4xl md:text-6xl xl:text-7xl mb-10"
-                        >
-                            Junior Programmer <br />
-                            Tech lover
-                        </h1>
-
-                        <p
-                            class="font-normal text-gray-500 text-sm md:text-md xl:text-lg mb-10"
-                        >
-                            Hi, I'm Alejandro. In addition to being a UI/UX designer, I have experience in PC repair<br>
-                            and mobile technology. If you're looking for someone with technical skills<br> 
-                            in both design and technology, let's shake hands.
-                        </p>
-
-                        <div class="space-y-5 lg:space-x-5 mb-10">
-                            <a
-                                href="mailto:rivello088@gmail.com"
-                                class="block md:inline px-8 py-3 font-medium bg-indigo-800 text-white text-lg rounded-md hover:bg-indigo-600 transiton ease-in-out duration-300"
-                                >Hire me</a
-                            >
-
-                            <a
-                                href="assets/files/C.V Alejandro Rivello.pdf"
-                                download="C.V. Alejandro Rivello.pdf"
-                                class="block md:inline px-8 py-3 font-medium text-indigo-800 text-lg border-2 border-indigo-800 rounded-md hover:bg-indigo-600 hover:text-white transiton ease-linear duration-300"
-                                >Get my CV</a
-                            >
-                        </div>
-
-                        <hr class="text-gray-500 mb-5" />
-
-                        <span class="font-normal text-gray-500 text-sm"
-                            >I am currently working.</span
-                        >
-                    </div>
-
-                    <div class="mx-auto lg:mx-0 ml-64 w-1/3">
-                        <img src="assets/image/image.png" alt="Image" class="rounded-md overflow-hidden" />
-                    </div>
-                </header>
-            </div>
-            <!-- container.// -->
-        </section>
-
-        <section class="py-16 lg:mb-20">
-            <div class="container max-w-screen-xl mx-auto px-4">
-                <h1
-                    class="font-semibold text-gray-800 text-2xl md:text-3xl xl:text-5xl text-center leading-tight mb-20 xl:mb-40"
-                >
-                    From brainstorming ideas to maintaining a personal touch, <br />
-                    I enjoy creating neat and polished
-                    <span class="text-indigo-800"
-                        >front-end projects <br />
-                        with attention to detail.</span
-                    >
-                </h1>
-                <section class="flex mx-auto w-3/4 ">
-                    <div class="mx-auto xl:mx-0 my-auto text-center">
-                        <img src="assets/image/planification.jpg" alt="Image" class="w-3/3 rounded-md"/>
-                    </div>
-                </section>
-                <div class="flex mx-auto">
-                    <h1 class="font-medium mx-auto mt-32 text-gray-700 text-3xl md:text-4xl mb-5">Portfolio</h1>
-                </div>  
-                <div class="flex flex-col xl:flex-row gap-16">
-                      
-                    <div
-                        class="grid grid-cols-2 mx-auto text-center xl:text-left xl:gap-x-24 mt-10"
-                    >
-                        
-                        <div class="mb-16 xl:mb-0">
-                            <h4
-                                class="font-semibold text-gray-800 text-md md:text-lg mb-5"
-                            >
-                                Web development
-                            </h4>
-
-                            <p
-                                class="font-normal text-gray-500 text-xs md:text-sm mb-5"
-                            >
-                                I like to learn, design and develop websites with a
-                                <br />
-                                variety of programming languages
-                                <br />
-                                and frameworks.
-                            </p>
-                            <a
-                                href="https://revint-landing.vercel.app"
-                                class="flex items-center justify-center xl:justify-start gap-3
-                                1 font-medium text-indigo-800 text-md hover:text-indigo-600 transition ease-in-out duration-300"
-                            >
-                                Holberton Project
-                                <i data-feather="arrow-right"></i>
-                            </a>
-                            <a
-                                href="https://synergysystemisbo.github.io/Proyecto/index.html"
-                                class="flex items-center justify-center xl:justify-start gap-3 font-medium text-indigo-800 text-md hover:text-indigo-600 transition ease-in-out duration-300"
-                            >
-                                UTU Project
-                                <i data-feather="arrow-right"></i>
-                            </a>
-                            
-                        </div>
-
-                        <div>
-                            <h4
-                                class="font-semibold text-gray-800 text-md md:text-lg mb-5"
-                            >
-                                Computer technician
-                            </h4>
-
-                            <p
-                                class="font-normal text-gray-500 text-xs md:text-sm mb-5"
-                            >
-                                In my free time I like to repair computers and
-                                <br />
-                                electronic devices, I also like to learn about
-                                <br />
-                                new technologies and how they work.
-                            </p>
-
-                            <a
-                                href="#"
-                                class="flex items-center justify-center xl:justify-start gap-3 font-medium text-indigo-800 text-md hover:text-indigo-600 transition ease-in-out duration-300"
-                            >
-                            </a>
-                        </div>
-
-                        <div>
-                            <h4
-                                class="font-semibold mt-5 text-gray-800 text-md md:text-lg mb-5"
-                            >
-                                Smart home
-                            </h4>
-
-                            <p
-                                class="font-normal text-gray-500 text-xs md:text-sm mb-5"
-                            >
-                                I customized my home with a variety of smart
-                                <br />
-                                home products, I think is a great way to start.
-                                <br />
-                                Looking for a job to learn more about it.
-                            </p>
-
-                            <a
-                                href="#"
-                                class="flex items-center justify-center xl:justify-start gap-3 font-medium text-indigo-800 text-md hover:text-indigo-600 transition ease-in-out duration-300"
-                            >
-                            </a>
-                        </div>
-                        <div>
-                            <h4
-                                class="font-semibold text-gray-800 text-md md:text-lg mb-5"
-                            >
-                                Photography
-                            </h4>
-
-                            <p
-                                class="font-normal text-gray-500 text-xs md:text-sm mb-5"
-                            >
-                                Photography captivates me with its power to freeze
-                                <br />
-                                 moments, revealing beauty in every frame.
-                                <br />
-                                Through the lens, I find endless
-                                <br />
-                                insipiration and creativity.
-                            </p>
-
-                            <a
-                                href="#"
-                                class="flex items-center justify-center xl:justify-start gap-3 font-medium text-indigo-800 text-md hover:text-indigo-600 transition ease-in-out duration-300"
-                            >
-                            </a>
-                        </div>
-
-                        
-
-                        
-                    </div>
+                    <button
+                        class="w-10 h-10 lg:hidden ml-auto flex items-center justify-center text-indigo-800 border border-indigo-800 rounded-md"
+                        @click="navbarOpen = !navbarOpen">
+                        <i data-feather="menu"></i>
+                    </button>
                 </div>
-            </div>
-            <!-- container.// -->
-        </section>
 
-        ><section class="py-10 md:py-16">
+                <ul class="flex flex-row items-center space-x-20 mb-10 xl:mb-0"
+                    :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
+                    <li
+                        class="font-medium text-gray-500 text-lg hover:text-gray-400 transiton ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="#education">Education</a>
+                    </li>
+                    <li
+                        class="font-medium text-gray-500 text-lg hover:text-gray-400 transiton ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="#works">Works</a>
+                    </li>
 
-            <div class="container max-w-screen-xl mx-auto px-4">
+                    <li
+                        class="px-8 py-3 font-medium text-indigo-800 text-lg text-center border-2 border-indigo-800 rounded-md hover:bg-indigo-800 hover:text-white transiton ease-linear duration-200">
+                        <a href="mailto:rivello088@gmail.com">Hire me</a>
+                    </li>
+                    <li
+                        class="font-medium text-gray-500 text-lg hover:text-gray-400 transiton ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="index.html"
+                            class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300">
+                            <span class="text-gray-500 hover:text-white transition ease-in-out duration-500">ES</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
 
-                <h1 id="education" class="font-medium text-gray-700 text-3xl md:text-4xl mb-16">Education</h1>
+            <header class="flex flex-col lg:flex-row justify-between lg:mb-20">
+                <div class="text-center lg:text-left mb-20 lg:mb-0">
+                    <div class="flex items-center justify-center lg:justify-start gap-2 mb-10">
+                        <span class="w-20 h-0.5 bg-indigo-700"></span>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-                        <h4 class="font-normal text-gray-700 text-lg mb-4">March - November 2023</h4>
-                        <h4 class="font-bold text-gray-700 text-lg mb-4">Holberton School</h4>
-                        <h3 class="font-medium text-gray-700 text-lg mb-4">Foundations of Computer Science</h3>
-                        <p class="font-normal text-gray-500 text-md mb-4">
-                            Faced challenges in the rapid execution of<br>
-                            projects, and new technologies, enriching<br>
-                            the learning, and strengthening teamwork<br> 
-                            skills. To conclude, a project was<br>
-                            completed to test the acquired knowledge and skills
+                        <p class="font-medium text-indigo-700 text-xl">
+                            Alejandro Rivello
                         </p>
                     </div>
-                
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-                        <h4 class="font-normal text-gray-700 text-lg mb-4">2020 - 2022</h4>
-                        <h4 class="font-bold text-gray-700 text-lg mb-4">UTU Oriented to Web Design</h4>
-                        <h3 class="font-medium text-gray-700 text-lg mb-4">Technologist in Computer Science</h3>
-                        <p class="font-normal text-gray-500 text-md mb-4">
-                            UTU in computer science.
-                            Core subjects<br>
-                            with greater specialization include Web Design,
-                            BDD, ADA, Web Programming, Web Project Management,
-                            and Business Training. A final project was carried out in a team<br>
-                            that unified these subjects into a final product.
-                        </p>
-                    </div>
-                
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-                        <h4 class="font-normal text-gray-700 text-lg mb-4">May - July 2008</h4>
-                        <h4 class="font-bold text-gray-700 text-lg mb-4">Ametrano & Asociados</h4>
-                        <h3 class="font-medium text-gray-700 text-lg mb-4">Call Center Operator</h3>
-                        <p class="font-normal text-gray-500 text-md mb-4">
-                            The course content included techniques to improve customer
-                            service, effective communication, conflict resolution, marketing,
-                            and included interesting tools such as neurolinguistic programming,
-                            vocational guidance workshop, and Office package, among others.
-                        </p>
-                    </div>
-                
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-                        <h4 class="font-normal text-gray-700 text-lg mb-4">February - May 2006</h4>
-                        <h4 class="font-bold text-gray-700 text-lg mb-4">Taller de Informática</h4>
-                        <h3 class="font-medium text-gray-700 text-lg mb-4">PC Maintenance and Repair Technician</h3>
-                        <p class="font-normal text-gray-500 text-md mb-4">
-                            In this technical course, learning covered PC maintenance
-                            and repair, software and hardware installation, network
-                            installation, and a final project.
-                        </p>
-                    </div>
-                
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-                        <h4 class="font-normal text-gray-700 text-lg mb-4">March - May 2005</h4>
-                        <h4 class="font-bold text-gray-700 text-lg mb-4">Círculo Informático</h4>
-                        <h3 class="font-medium text-gray-700 text-lg mb-4">Graphic Designer</h3>
-                        <p class="font-normal text-gray-500 text-md mb-4">
-                            In this course, the learning covered the use<br>
-                            of the main design tools such as Photoshop<br> 
-                            and Corel Draw. The final project was a brochure
-                            for a company.
-                        </p>
-                    </div>
-                </div>
-                
 
-            </div>
-
-        </section>
-
-        <section class="py-16">
-            <div class="container max-w-screen-xl mx-auto px-4">
-                <h1 class="font-semibold text-gray-800 text-center text-xl md:text-3xl xl:text-5xl leading-tight mb-10 md:mb-20 xl:mb-40">
-                    It’s great to always give the customer the <br />
-                    best feed.
-                </h1>
-        
-                <div class="flex w-1/3 text-center md:space-x-2 xl:space-x-5 mb-2 md:mb-5 xl:mb-8 space-y-2 md:space-y-0 xl:space-y-0">
-                    <img src="assets/image/recon-uber.jpeg" alt="Image" class="hover:opacity-75 transition ease-in-out duration-300 rounded-md" />
-                    <img src="assets/image/recon-uber2.jpeg" alt="Image" class="hover:opacity-75 transition ease-in-out duration-300 rounded-md" />
-                    <img src="assets/image/recon-uber3.jpeg" alt="Image" class="hover:opacity-75 transition ease-in-out duration-300 rounded-md" />
-                </div>
-            </div>
-            <!-- container.// -->
-        </section>
-        
-
-        <section class="py-10 md:py-16">
-
-            <div class="container max-w-screen-xl mx-auto px-4">
-
-                <h1 id="works" class="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Works</h1>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-                        <h4 class="font-normal text-gray-700 text-lg mb-4">2016 - 2022</h4>
-                        <h4 class="font-bold text-gray-700 text-lg mb-4">Uber, Cabify</h4>
-                        <h3 class="font-medium text-gray-700 text-lg mb-4">Professional Driver</h3>
-                        <p class="font-normal text-gray-500 text-md mb-4">
-                            More than 3200 trips made, with an average rating
-                            of 4.9 stars. Excellent vehicle driving, maintenance, 
-                            cleaning, and customer service skills.
-                        </p>
-                    </div>
-                
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-                        <h4 class="font-normal text-gray-700 text-lg mb-4">2011 - 2015</h4>
-                        <h4 class="font-bold text-gray-700 text-lg mb-4">Puntoluz S.A.</h4>
-                        <h3 class="font-medium text-gray-700 text-lg mb-4">Technician in Official Service</h3>
-                        <p class="font-normal text-gray-500 text-md mb-4">
-                            I learned to repair, maintain,
-                            quality control, post sales service, 
-                            and customer service. I worked with
-                            cell phones from Nokia and Microsoft, 
-                            and because of the experience I gained,
-                            I was able to work with other brands.
-                        </p>
-                    </div>
-                
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-                        <h4 class="font-normal text-gray-700 text-lg mb-4">2009</h4>
-                        <h4 class="font-bold text-gray-700 text-lg mb-4">Tienda Inglesa</h4>
-                        <h3 class="font-medium text-gray-700 text-lg mb-4">Technology Promoter</h3>
-                        <p class="font-normal text-gray-500 text-md mb-4">
-                            I worked in the technology department,
-                            I was in charge of promoting the products,
-                            and advising the clients.
-                        </p>
-                    </div>
-                
-                    <div class="bg-gray-50 px-8 py-10 rounded-md">
-                        <h4 class="font-normal text-gray-700 text-lg mb-4">2007 - 2008 </h4>
-                        <h4 class="font-bold text-gray-700 text-lg mb-4">CBR Internet Café</h4>
-                        <h3 class="font-medium text-gray-700 text-lg mb-4">PC Maintenance and Chief</h3>
-                        <p class="font-normal text-gray-500 text-md mb-4">
-                            I was in charge of the maintenance of the computers,
-                            and the network, I also had to attend to the clients,
-                            and solve their problems.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="bg-gray-50 py-16 lg:mb-20">
-            <div class="container max-w-screen-xl mx-auto px-4">
-                <p
-                    class="font-normal text-gray-400 text-xl text-center lg:text-left mb-5"
-                >
-                    Trusted by
-                </p>
-
-                <div
-                    class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 ml-16 md:ml-24 lg:ml-0"
-                >
-
-                    <img
-                        src="assets/image/cabify.svg"
-                        alt="Image"
-                        class="mb-5 md:mb-0"
-                    />
-
-                    <img
-                        src="assets/image/uber.svg"
-                        alt="Image"
-                        class="mb-5 md:mb-0"
-                    />
-                </div>
-            </div>
-            <!-- container.// -->
-            
-        </section>
-
-        <footer class="bg-blue-50 py-16 mb-10">
-            <div class="container max-w-screen-xl mx-auto px-4">
-                <div class="text-center">
-                    <h1
-                        class="font-medium text-gray-700 text-2xl md:text-5xl mb-5"
-                    >
-                        Contact with me
+                    <h1 class="font-bold text-gray-800 text-4xl md:text-6xl xl:text-7xl mb-10">
+                        Junior Programmer <br />
+                        Tech lover
                     </h1>
 
-                    <p
-                        class="font-normal text-gray-400 text-sm md:text-lg mb-20"
-                    >
-                        Feel free to contact me for any <br />
-                         inquiries.
+                    <p class="font-normal text-gray-500 text-sm md:text-md xl:text-lg mb-10">
+                        Hi, I'm Alejandro. In addition to being a UI/UX designer, I have experience in PC repair<br>
+                        and mobile technology. If you're looking for someone with technical skills<br>
+                        in both design and technology, let's shake hands.
                     </p>
 
-                    <div
-                        class="flex items-center justify-center space-x-4 md:space-x-8"
-                    >
-                        <a
-                            href="https://twitter.com/alejandrosway"
-                            class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300"
-                        >
-                            <i
-                                data-feather="twitter"
-                                class="text-gray-500 hover:text-white transition ease-in-out duration-500"
-                            ></i>
-                        </a>
+                    <div class="space-y-5 lg:space-x-5 mb-10">
+                        <a href="mailto:rivello088@gmail.com"
+                            class="block md:inline px-8 py-3 font-medium bg-indigo-800 text-white text-lg rounded-md hover:bg-indigo-600 transiton ease-in-out duration-300">Hire
+                            me</a>
 
-                        <a
-                            href="https://www.facebook.com/Rivello/"
-                            class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300"
-                        >
-                            <i
-                                data-feather="facebook"
-                                class="text-gray-500 hover:text-white transition ease-in-out duration-500"
-                            ></i>
-                        </a>
+                        <a href="assets/files/C.V Alejandro Rivello.pdf" download="C.V. Alejandro Rivello.pdf"
+                            class="block md:inline px-8 py-3 font-medium text-indigo-800 text-lg border-2 border-indigo-800 rounded-md hover:bg-indigo-600 hover:text-white transiton ease-linear duration-300">Get
+                            my CV</a>
+                    </div>
 
-                        <a
-                            href="https://www.instagram.com/alejandr088/"
-                            class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300"
-                        >
-                            <i
-                                data-feather="instagram"
-                                class="text-gray-500 hover:text-white transition ease-in-out duration-500"
-                            ></i>
-                        </a>
+                    <hr class="text-gray-500 mb-5" />
 
-                        <a
-                            href="https://www.github.com/alejandr088/"
-                            class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300"
-                        >
-                            <i
-                                data-feather="github"
-                                class="text-gray-500 hover:text-white transition ease-in-out duration-500"
-                            ></i>
-                        </a>
+                    <span class="font-normal text-gray-500 text-sm">I am currently working.</span>
+                </div>
 
-                        <a
-                            href="https://www.linkedin.com/in/alejandro-rivello/"
-                            class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300"
-                        >
-                            <i
-                                data-feather="linkedin"
-                                class="text-gray-500 hover:text-white transition ease-in-out duration-500"
-                            ></i>
+                <div class="mx-auto lg:mx-0 ml-64 w-1/3">
+                    <img src="assets/image/image.png" alt="Image" class="rounded-md overflow-hidden" />
+                </div>
+            </header>
+        </div>
+        <!-- container.// -->
+    </section>
+
+    <section class="py-16 lg:mb-20">
+        <div class="container max-w-screen-xl mx-auto px-4">
+            <h1
+                class="font-semibold text-gray-800 text-2xl md:text-3xl xl:text-5xl text-center leading-tight mb-20 xl:mb-40">
+                From brainstorming ideas to maintaining a personal touch, <br />
+                I enjoy creating neat and polished
+                <span class="text-indigo-800">front-end projects <br />
+                    with attention to detail.</span>
+            </h1>
+            <section class="flex mx-auto w-3/4 ">
+                <div class="mx-auto xl:mx-0 my-auto text-center">
+                    <img src="assets/image/planification.jpg" alt="Image" class="w-3/3 rounded-md" />
+                </div>
+            </section>
+            <div class="flex mx-auto">
+                <h1 class="font-medium mx-auto mt-32 text-gray-700 text-3xl md:text-4xl mb-5">Portfolio</h1>
+            </div>
+            <div class="flex flex-col xl:flex-row gap-16">
+
+                <div class="grid grid-cols-2 mx-auto text-center xl:text-left xl:gap-x-24 mt-10">
+
+                    <div class="mb-16 xl:mb-0">
+                        <h4 class="font-semibold text-gray-800 text-md md:text-lg mb-5">
+                            Web development
+                        </h4>
+
+                        <p class="font-normal text-gray-500 text-xs md:text-sm mb-5">
+                            I like to learn, design and develop websites with a
+                            <br />
+                            variety of programming languages
+                            <br />
+                            and frameworks.
+                        </p>
+                        <a href="https://revint-landing.vercel.app"
+                            class="flex items-center justify-center xl:justify-start gap-3
+                                1 font-medium text-indigo-800 text-md hover:text-indigo-600 transition ease-in-out duration-300">
+                            Holberton Project
+                            <i data-feather="arrow-right"></i>
+                        </a>
+                        <a href="https://synergysystemisbo.github.io/Proyecto/index.html"
+                            class="flex items-center justify-center xl:justify-start gap-3 font-medium text-indigo-800 text-md hover:text-indigo-600 transition ease-in-out duration-300">
+                            UTU Project
+                            <i data-feather="arrow-right"></i>
                         </a>
 
                     </div>
+
+                    <div>
+                        <h4 class="font-semibold text-gray-800 text-md md:text-lg mb-5">
+                            Computer technician
+                        </h4>
+
+                        <p class="font-normal text-gray-500 text-xs md:text-sm mb-5">
+                            In my free time I like to repair computers and
+                            <br />
+                            electronic devices, I also like to learn about
+                            <br />
+                            new technologies and how they work.
+                        </p>
+
+                        <a href="#"
+                            class="flex items-center justify-center xl:justify-start gap-3 font-medium text-indigo-800 text-md hover:text-indigo-600 transition ease-in-out duration-300">
+                        </a>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold mt-5 text-gray-800 text-md md:text-lg mb-5">
+                            Smart home
+                        </h4>
+
+                        <p class="font-normal text-gray-500 text-xs md:text-sm mb-5">
+                            I customized my home with a variety of smart
+                            <br />
+                            home products, I think is a great way to start.
+                            <br />
+                            Looking for a job to learn more about it.
+                        </p>
+
+                        <a href="#"
+                            class="flex items-center justify-center xl:justify-start gap-3 font-medium text-indigo-800 text-md hover:text-indigo-600 transition ease-in-out duration-300">
+                        </a>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800 text-md md:text-lg mb-5">
+                            Photography
+                        </h4>
+
+                        <p class="font-normal text-gray-500 text-xs md:text-sm mb-5">
+                            Photography captivates me with its power to freeze
+                            <br />
+                            moments, revealing beauty in every frame.
+                            <br />
+                            Through the lens, I find endless
+                            <br />
+                            insipiration and creativity.
+                        </p>
+
+                        <a href="#"
+                            class="flex items-center justify-center xl:justify-start gap-3 font-medium text-indigo-800 text-md hover:text-indigo-600 transition ease-in-out duration-300">
+                        </a>
+                    </div>
                 </div>
             </div>
-        </footer>
+        </div>
+        <!-- container.// -->
+    </section>
 
-        <script>
-            feather.replace();
-        </script>
-    </body>
+    ><section class="py-10 md:py-16">
+
+        <div class="container max-w-screen-xl mx-auto px-4">
+
+            <h1 id="education" class="font-medium text-gray-700 text-3xl md:text-4xl mb-16">Education</h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-50 px-8 py-10 rounded-md">
+                    <h4 class="font-normal text-gray-700 text-lg mb-4">2024</h4>
+                    <h4 class="font-bold text-gray-700 text-lg mb-4">GeneXus</h4>
+                    <h3 class="font-medium text-gray-700 text-lg mb-4">GeneXus Core (Studying online)</h3>
+                    <p class="font-normal text-gray-500 text-md mb-4">
+                        Currently practicing with the GeneXus Trial<br>
+                        IDE since it is a requested program<br>
+                        and very useful nowadays.<br>
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 px-8 py-10 rounded-md">
+                    <h4 class="font-normal text-gray-700 text-lg mb-4">March - November 2023</h4>
+                    <h4 class="font-bold text-gray-700 text-lg mb-4">Holberton School</h4>
+                    <h3 class="font-medium text-gray-700 text-lg mb-4">Foundations of Computer Science</h3>
+                    <p class="font-normal text-gray-500 text-md mb-4">
+                        Faced challenges in the rapid execution of<br>
+                        projects, and new technologies, enriching<br>
+                        the learning, and strengthening teamwork<br>
+                        skills. To conclude, a project was<br>
+                        completed to test the acquired knowledge and skills
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 px-8 py-10 rounded-md">
+                    <h4 class="font-normal text-gray-700 text-lg mb-4">2020 - 2022</h4>
+                    <h4 class="font-bold text-gray-700 text-lg mb-4">UTU Oriented to Web Design</h4>
+                    <h3 class="font-medium text-gray-700 text-lg mb-4">Technologist in Computer Science</h3>
+                    <p class="font-normal text-gray-500 text-md mb-4">
+                        UTU in computer science.
+                        Core subjects<br>
+                        with greater specialization include Web Design,
+                        BDD, ADA, Web Programming, Web Project Management,
+                        and Business Training. A final project was carried out in a team<br>
+                        that unified these subjects into a final product.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 px-8 py-10 rounded-md">
+                    <h4 class="font-normal text-gray-700 text-lg mb-4">May - July 2008</h4>
+                    <h4 class="font-bold text-gray-700 text-lg mb-4">Ametrano & Asociados</h4>
+                    <h3 class="font-medium text-gray-700 text-lg mb-4">Call Center Operator</h3>
+                    <p class="font-normal text-gray-500 text-md mb-4">
+                        The course content included techniques to improve customer
+                        service, effective communication, conflict resolution, marketing,
+                        and included interesting tools such as neurolinguistic programming,
+                        vocational guidance workshop, and Office package, among others.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 px-8 py-10 rounded-md">
+                    <h4 class="font-normal text-gray-700 text-lg mb-4">February - May 2006</h4>
+                    <h4 class="font-bold text-gray-700 text-lg mb-4">Taller de Informática</h4>
+                    <h3 class="font-medium text-gray-700 text-lg mb-4">PC Maintenance and Repair Technician</h3>
+                    <p class="font-normal text-gray-500 text-md mb-4">
+                        In this technical course, learning covered PC maintenance
+                        and repair, software and hardware installation, network
+                        installation, and a final project.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 px-8 py-10 rounded-md">
+                    <h4 class="font-normal text-gray-700 text-lg mb-4">March - May 2005</h4>
+                    <h4 class="font-bold text-gray-700 text-lg mb-4">Círculo Informático</h4>
+                    <h3 class="font-medium text-gray-700 text-lg mb-4">Graphic Designer</h3>
+                    <p class="font-normal text-gray-500 text-md mb-4">
+                        In this course, the learning covered the use<br>
+                        of the main design tools such as Photoshop<br>
+                        and Corel Draw. The final project was a brochure
+                        for a company.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="py-16">
+        <div class="container max-w-screen-xl mx-auto px-4">
+            <h1
+                class="font-semibold text-gray-800 text-center text-xl md:text-3xl xl:text-5xl leading-tight mb-10 md:mb-20 xl:mb-40">
+                It’s great to always give the customer the <br />
+                best feed.
+            </h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <img src="assets/image/recon-uber.jpeg" alt="Image"
+                    class="w-auto h-auto rounded-md hover:opacity-75 transition ease-in-out duration-300" />
+                <img src="assets/image/recon-uber2.jpeg" alt="Image"
+                    class="w-auto h-auto rounded-md hover:opacity-75 transition ease-in-out duration-300" />
+                <img src="assets/image/recon-uber3.jpeg" alt="Image"
+                    class="w-auto h-auto rounded-md hover:opacity-75 transition ease-in-out duration-300" />
+            </div>
+        </div>
+        <!-- container.// -->
+    </section>
+
+
+    <section class="py-10 md:py-16">
+
+        <div class="container max-w-screen-xl mx-auto px-4">
+
+            <h1 id="works" class="font-medium text-gray-700 text-3xl md:text-4xl mb-5">Works</h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+                <div class="bg-gray-50 px-8 py-10 rounded-md">
+                    <h4 class="font-normal text-gray-700 text-lg mb-4">2016 - 2022</h4>
+                    <h4 class="font-bold text-gray-700 text-lg mb-4">Uber, Cabify</h4>
+                    <h3 class="font-medium text-gray-700 text-lg mb-4">Professional Driver</h3>
+                    <p class="font-normal text-gray-500 text-md mb-4">
+                        More than 3200 trips made, with an average rating
+                        of 4.9 stars. Excellent vehicle driving, maintenance,
+                        cleaning, and customer service skills.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 px-8 py-10 rounded-md">
+                    <h4 class="font-normal text-gray-700 text-lg mb-4">2011 - 2015</h4>
+                    <h4 class="font-bold text-gray-700 text-lg mb-4">Puntoluz S.A.</h4>
+                    <h3 class="font-medium text-gray-700 text-lg mb-4">Technician in Official Service</h3>
+                    <p class="font-normal text-gray-500 text-md mb-4">
+                        I learned to repair, maintain,
+                        quality control, post sales service,
+                        and customer service. I worked with
+                        cell phones from Nokia and Microsoft,
+                        and because of the experience I gained,
+                        I was able to work with other brands.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 px-8 py-10 rounded-md">
+                    <h4 class="font-normal text-gray-700 text-lg mb-4">2009</h4>
+                    <h4 class="font-bold text-gray-700 text-lg mb-4">Tienda Inglesa</h4>
+                    <h3 class="font-medium text-gray-700 text-lg mb-4">Technology Promoter</h3>
+                    <p class="font-normal text-gray-500 text-md mb-4">
+                        I worked in the technology department,
+                        I was in charge of promoting the products,
+                        and advising the clients.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 px-8 py-10 rounded-md">
+                    <h4 class="font-normal text-gray-700 text-lg mb-4">2007 - 2008 </h4>
+                    <h4 class="font-bold text-gray-700 text-lg mb-4">CBR Internet Café</h4>
+                    <h3 class="font-medium text-gray-700 text-lg mb-4">PC Maintenance and Chief</h3>
+                    <p class="font-normal text-gray-500 text-md mb-4">
+                        I was in charge of the maintenance of the computers,
+                        and the network, I also had to attend to the clients,
+                        and solve their problems.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-50 py-16 lg:mb-20">
+        <div class="container max-w-screen-xl mx-auto px-4">
+            <p class="font-normal text-gray-400 text-xl text-center lg:text-left mb-5">
+                Worked with
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 ml-16 md:ml-24 lg:ml-0">
+
+                <img src="assets/image/cabify.svg" alt="Image" class="mb-5 md:mb-0" />
+
+                <img src="assets/image/uber.svg" alt="Image" class="mb-5 md:mb-0" />
+            </div>
+        </div>
+        <!-- container.// -->
+
+    </section>
+
+    <footer class="bg-blue-50 py-16 mb-10">
+        <div class="container max-w-screen-xl mx-auto px-4">
+            <div class="text-center">
+                <h1 class="font-medium text-gray-700 text-2xl md:text-5xl mb-5">
+                    Contact with me
+                </h1>
+
+                <p class="font-normal text-gray-400 text-sm md:text-lg mb-20">
+                    Feel free to contact me for any <br />
+                    inquiries.
+                </p>
+
+                <div class="flex items-center justify-center space-x-4 md:space-x-8">
+                    <a href="https://twitter.com/alejandrosway"
+                        class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300">
+                        <i data-feather="twitter"
+                            class="text-gray-500 hover:text-white transition ease-in-out duration-500"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/Rivello/"
+                        class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300">
+                        <i data-feather="facebook"
+                            class="text-gray-500 hover:text-white transition ease-in-out duration-500"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/alejandr088/"
+                        class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300">
+                        <i data-feather="instagram"
+                            class="text-gray-500 hover:text-white transition ease-in-out duration-500"></i>
+                    </a>
+
+                    <a href="https://www.github.com/alejandr088/"
+                        class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300">
+                        <i data-feather="github"
+                            class="text-gray-500 hover:text-white transition ease-in-out duration-500"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/alejandro-rivello/"
+                        class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300">
+                        <i data-feather="linkedin"
+                            class="text-gray-500 hover:text-white transition ease-in-out duration-500"></i>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+
 </html>
 
 <!-- There is no compression algorithm for experience. You can’t compress love. -->
