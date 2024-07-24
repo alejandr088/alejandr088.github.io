@@ -19,19 +19,19 @@
     <script>
         let lastScrollTop = 0;
         const navbar = document.querySelector('.fixed-top');
-      
-        window.addEventListener('scroll', function() {
-          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-          if (scrollTop > lastScrollTop) {
-            // Scroll down
-            navbar.style.top = '-60px'; // Ajusta según la altura de tu barra
-          } else {
-            // Scroll up
-            navbar.style.top = '0';
-          }
-          lastScrollTop = scrollTop;
+
+        window.addEventListener('scroll', function () {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                // Scroll down
+                navbar.style.top = '-60px'; // Ajusta según la altura de tu barra
+            } else {
+                // Scroll up
+                navbar.style.top = '0';
+            }
+            lastScrollTop = scrollTop;
         });
-      </script>
+    </script>
 </head>
 
 <body>
@@ -46,32 +46,32 @@
                     </button>
                 </div>
 
-                <!-- Barra superior fija -->
-  <div class="fixed-top">
-    <ul class="flex flex-row items-center space-x-20 mb-10 xl:mb-0"
-                    :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
-                    <li
-                        class="font-medium text-gray-500 text-lg hover:text-gray-400 transiton ease-in-out duration-300 mb-5 lg:mb-0">
-                        <a href="#education">Education</a>
-                    </li>
-                    <li
-                        class="font-medium text-gray-500 text-lg hover:text-gray-400 transiton ease-in-out duration-300 mb-5 lg:mb-0">
-                        <a href="#works">Works</a>
-                    </li>
+                <div class="fixed-top">
+                    <ul class="flex flex-row items-center space-x-20 mb-10 xl:mb-0"
+                        :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
+                        <li
+                            class="font-medium text-gray-500 text-lg hover:text-gray-400 transiton ease-in-out duration-300 mb-5 lg:mb-0">
+                            <a href="#education">Education</a>
+                        </li>
+                        <li
+                            class="font-medium text-gray-500 text-lg hover:text-gray-400 transiton ease-in-out duration-300 mb-5 lg:mb-0">
+                            <a href="#works">Works</a>
+                        </li>
 
-                    <li
-                        class="px-8 py-3 font-medium text-indigo-800 text-lg text-center border-2 border-indigo-800 rounded-md hover:bg-indigo-800 hover:text-white transiton ease-linear duration-200">
-                        <a href="mailto:rivello088@gmail.com">Hire me</a>
-                    </li>
-                    <li
-                        class="font-medium text-gray-500 text-lg hover:text-gray-400 transiton ease-in-out duration-300 mb-5 lg:mb-0">
-                        <a href="index.html"
-                            class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300">
-                            <span class="text-gray-500 hover:text-white transition ease-in-out duration-500">ES</span>
-                        </a>
-                    </li>
-                </ul>
-  </div>
+                        <li
+                            class="px-8 py-3 font-medium text-indigo-800 text-lg text-center border-2 border-indigo-800 rounded-md hover:bg-indigo-800 hover:text-white transiton ease-linear duration-200">
+                            <a href="mailto:rivello088@gmail.com">Hire me</a>
+                        </li>
+                        <li
+                            class="font-medium text-gray-500 text-lg hover:text-gray-400 transiton ease-in-out duration-300 mb-5 lg:mb-0">
+                            <a href="index_es.html"
+                                class="w-16 h-16 flex items-center justify-center rounded-full hover:bg-red-200 transition ease-in-out duration-300">
+                                <span
+                                    class="text-gray-500 hover:text-white transition ease-in-out duration-500">ES</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
 
             <header class="flex flex-col lg:flex-row justify-between lg:mb-20">
@@ -450,7 +450,7 @@
     <script>
         feather.replace();
     </script>
-    
+
     <script>
         // Check if the user prefers dark mode
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
