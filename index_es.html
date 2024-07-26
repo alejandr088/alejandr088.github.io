@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alejandro JR Develop</title>
     <link rel="icon" href="assets/image/favicon.ico" />
-    <link rel="stylesheet" href="assets/css/tailwind2.css" />
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
@@ -402,9 +402,12 @@
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 ml-16 md:ml-24 lg:ml-0">
-                <img src="assets/image/cabify.svg" alt="Image" class="w-16 md:w-24 lg:w-32 xl:w-40 mb-5 md:mb-0" />
+                <img src="assets/image/cabify.svg" alt="Image" class="mb-5 md:mb-0" />
 
-                <img src="assets/image/uber.svg" alt="Image" class="w-16 md:w-24 lg:w-32 xl:w-40 mb-5 md:mb-0" />
+                <img src="assets/image/uber.svg" alt="Image" class="mb-5 md:mb-0" />
+                <img src="assets/image/tinglesa.png" alt="Image" class="mr-16 md:mb-0" />
+                <img src="assets/image/quijote.png" alt="Image" class="mr-16 mt-10 md:mb-0" />
+                <img src="assets/image/newlife.png" alt="Image" class="mb-5 ml-16 md:mb-0" />
             </div>
         </div>
         </section>
@@ -460,6 +463,13 @@
     <script>
         feather.replace();
     </script>
+
+<script>
+    // Check if the user prefers dark mode
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark-mode');
+    }
+</script>
 </body>
 
 </html>
